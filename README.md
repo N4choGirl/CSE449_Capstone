@@ -2,7 +2,7 @@
 
 This project has three phases to it. The current file system is what the project looked like when it completed phase two (the phase I was involved in).
 
-The application as of right now has some mild functionality, but all of the big analytics aspects are scheduled for phase three.
+The application as of right now has some mild functionality, but all of the big analytical aspects are scheduled for phase three.
 
 Phase two (my phase) was all about user interface and data collection.
 
