@@ -7,3 +7,5 @@ The application as of right now has some mild functionality, but all of the big 
 Phase two (my phase) was all about user interface and data collection.
 
 We have been using Eclipse as our IDE, but I'm sure others would work just as well. 
+
+For detailed help, please see the Installation and User Guides.
