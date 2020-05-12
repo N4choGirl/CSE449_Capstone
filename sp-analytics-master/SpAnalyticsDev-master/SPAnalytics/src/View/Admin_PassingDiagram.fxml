@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="251.0" prefWidth="1280.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <AnchorPane layoutX="290.0" layoutY="144.0" prefHeight="112.0" prefWidth="313.0">
+               <children>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="111.0" layoutY="71.0" onAction="#StopTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Stop" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutY="71.0" onMouseClicked="#StartTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Start" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="224.0" layoutY="71.0" onAction="#ResetTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Reset" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="Time" alignment="CENTER" layoutY="12.0" prefHeight="50.0" prefWidth="210.0" text="20:00 1st" textFill="WHITE">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="223.0" layoutY="10.0" onAction="#NextPeriodClicked" prefHeight="52.0" prefWidth="101.0" style="-fx-background-color: #C42134;" text="Next Period" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="PDGamePicker" layoutX="61.0" layoutY="144.0" prefHeight="31.0" prefWidth="186.0" promptText="Select Game" style="-fx-background-color: white;" />
+            <Text fill="WHITE" layoutX="64.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Games" textAlignment="CENTER" wrappingWidth="180.703125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="14.0" layoutY="14.0" onAction="#goBack" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="1166.0" layoutY="14.0" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Save All" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="346.0" layoutY="26.0" text="Passing Diagram" textFill="#c42134">
+               <font>
+                  <Font name="System Bold" size="75.0" />
+               </font>
+            </Label>
+            <Label fx:id="PDErrorMessage" layoutX="716.0" layoutY="162.0" prefHeight="36.0" prefWidth="246.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="398.0" fitWidth="854.0" layoutX="8.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/rink.png" />
+               </image>
+            </ImageView>
+            <Canvas fx:id="passingDiagramRink" height="392.0" layoutX="10.0" layoutY="69.0" onMousePressed="#passingDiagramRinkClicked" width="788.0" />
+            <TableView fx:id="passTable" layoutX="823.0" layoutY="5.0" prefHeight="434.0" prefWidth="431.0">
+              <columns>
+                <TableColumn fx:id="periodC" editable="false" prefWidth="55.20001220703125" sortType="DESCENDING" sortable="false" text="Period" />
+                <TableColumn fx:id="timeC" editable="false" prefWidth="77.5999755859375" sortType="DESCENDING" sortable="false" text="Time" />
+                  <TableColumn fx:id="typeC" editable="false" prefWidth="96.79998779296875" sortType="DESCENDING" sortable="false" text="Play Type" />
+                  <TableColumn fx:id="statusC" minWidth="6.4000244140625" prefWidth="60.0" text="Status" />
+                  <TableColumn fx:id="teamC" minWidth="0.0" prefWidth="73.60009765625" text="Team" />
+                  <TableColumn fx:id="playerC" editable="false" minWidth="0.0" prefWidth="69.5999755859375" sortType="DESCENDING" sortable="false" text="Player" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="PDShotType" layoutX="298.0" layoutY="16.0" prefHeight="31.0" prefWidth="186.0" promptText="Shot Type" style="-fx-background-color: white;" />
+            <ComboBox fx:id="PDPossession" layoutX="79.0" layoutY="16.0" prefHeight="31.0" prefWidth="186.0" promptText="Team With Possession" style="-fx-background-color: white;" />
+            <ComboBox fx:id="PDPlayer" layoutX="511.0" layoutY="16.0" prefHeight="31.0" prefWidth="186.0" promptText="Player Number" style="-fx-background-color: white;" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

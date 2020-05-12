@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="126.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="419.0" layoutY="9.0" prefHeight="122.0" prefWidth="443.0" text="Time On Ice " textFill="#c42134">
+               <font>
+                  <Font name="System Bold" size="75.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="1108.0" layoutY="52.0" onAction="#NetChartSaveHomePressed" prefHeight="40.0" prefWidth="169.0" style="-fx-background-color: #C42134;" text="Save All" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="1178.0" layoutY="3.0" onAction="#PlayerLogoutButtonClicked" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="3.0" layoutY="3.0" onAction="#goBack" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="592.0" prefWidth="1285.0" style="-fx-background-color: BLACK;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="458.0" layoutY="311.0" maxHeight="-Infinity" prefHeight="169.0" prefWidth="364.0">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="122.0" layoutY="128.0" onAction="#StopTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Stop" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="128.0" onAction="#StartTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Start" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="227.0" layoutY="128.0" onAction="#ResetTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Reset" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="Time" alignment="TOP_CENTER" layoutX="17.0" layoutY="63.0" prefHeight="50.0" prefWidth="210.0" text="20:00 1st" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" layoutX="227.0" layoutY="62.0" onAction="#NextPeriodClicked" prefHeight="52.0" prefWidth="101.0" style="-fx-background-color: #C42134;" text="Next Period" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <Group layoutX="237.0" layoutY="-30.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8">
+               <children>
+                  <ImageView fitHeight="398.0" fitWidth="815.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/rink.png" />
+                     </image>
+                  </ImageView>
+                  <Group layoutX="35.0" layoutY="65.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5">
+                     <children>
+                        <ImageView fx:id="homeJersey2" fitHeight="72.0" fitWidth="101.0" layoutX="296.0" layoutY="99.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Red.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="homeJersey1" fitHeight="72.0" fitWidth="101.0" layoutX="296.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Red.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="homeJersey5" fitHeight="72.0" fitWidth="101.0" layoutX="202.0" layoutY="43.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Red.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="homeJersey4" fitHeight="72.0" fitWidth="101.0" layoutX="202.0" layoutY="147.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Red.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="homeJersey3" fitHeight="72.0" fitWidth="101.0" layoutX="296.0" layoutY="198.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Red.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="awayJersey2" fitHeight="72.0" fitWidth="101.0" layoutX="344.0" layoutY="99.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Black.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="awayJersey4" fitHeight="72.0" fitWidth="101.0" layoutX="428.0" layoutY="147.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Black.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="awayJersey5" fitHeight="72.0" fitWidth="101.0" layoutX="428.0" layoutY="43.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Black.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="awayJersey3" fitHeight="72.0" fitWidth="101.0" layoutX="344.0" layoutY="198.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Black.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="awayJersey1" fitHeight="72.0" fitWidth="101.0" layoutX="344.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Black.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="homeJersey0" fitHeight="72.0" fitWidth="101.0" layoutX="106.0" layoutY="100.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Red.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="awayJersey0" fitHeight="72.0" fitWidth="101.0" layoutX="529.0" layoutY="98.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Black.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="homeJerseyLabel1" alignment="CENTER" layoutX="327.0" layoutY="20.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="1" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="homeJerseyLabel3" alignment="CENTER" layoutX="326.0" layoutY="216.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="3" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="awayJerseyLabel3" alignment="CENTER" layoutX="374.0" layoutY="215.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="3" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="awayJerseyLabel0" alignment="CENTER" layoutX="560.0" layoutY="116.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="homeJerseyLabel0" alignment="CENTER" layoutX="136.0" layoutY="121.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="homeJerseyLabel4" alignment="CENTER" layoutX="232.0" layoutY="164.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="4" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="homeJerseyLabel2" alignment="CENTER" layoutX="326.0" layoutY="117.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="2" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="awayJerseyLabel5" alignment="CENTER" layoutX="458.0" layoutY="63.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="5" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="awayJerseyLabel2" alignment="CENTER" layoutX="375.0" layoutY="117.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="2" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="awayJerseyLabel1" alignment="CENTER" layoutX="375.0" layoutY="20.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="1" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="homeJerseyLabel5" alignment="CENTER" layoutX="232.0" layoutY="63.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="5" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="awayJerseyLabel4" alignment="CENTER" layoutX="459.0" layoutY="164.0" onMouseClicked="#jerseyClicked" prefHeight="27.0" prefWidth="23.0" text="4" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="homeJersey6" fitHeight="72.0" fitWidth="101.0" layoutX="202.0" layoutY="93.0" opacity="0.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Red.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="homeJerseyLabel6" alignment="CENTER" layoutX="232.0" layoutY="116.0" onMouseClicked="#jerseyClicked" opacity="0.0" prefHeight="27.0" prefWidth="23.0" text="6" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="awayJersey6" fitHeight="72.0" fitWidth="101.0" layoutX="429.0" layoutY="96.0" opacity="0.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Jersey%20Black.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="awayJerseyLabel6" alignment="CENTER" layoutX="459.0" layoutY="117.0" onMouseClicked="#jerseyClicked" opacity="0.0" prefHeight="27.0" prefWidth="23.0" text="6" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <ComboBox fx:id="GamePickerIce" layoutX="441.0" layoutY="332.0" prefHeight="31.0" prefWidth="186.0" promptText="Select Game" style="-fx-background-color: white;" />
+            <Group layoutX="19.0" layoutY="14.0">
+               <children>
+                  <Group layoutY="45.0">
+                     <children>
+                        <Label layoutX="-3.0" prefHeight="41.0" prefWidth="148.0" text="Forwards" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutY="33.0" prefHeight="183.0" prefWidth="284.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="10.0" prefWidth="65.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="76.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="75.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="73.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 1: " textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 2: " textFill="WHITE" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 3:" textFill="WHITE" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 4: " textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Extra:" textFill="WHITE" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="homeLine11" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="11" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLineExtra" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="1" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine43" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="34" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine42" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="24" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine41" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="14" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine33" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="33" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine32" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="23" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine31" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="13" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine23" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="32" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine22" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="22" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine21" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="12" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine13" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="31" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLine12" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="21" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Group>
+                  <Group layoutY="262.0">
+                     <children>
+                        <GridPane layoutX="3.0" layoutY="33.0" prefHeight="128.0" prefWidth="213.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="10.0" prefWidth="65.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="76.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="75.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 1: " textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 2: " textFill="WHITE" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 3:" textFill="WHITE" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="homeLineD11" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLineD32" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLineD31" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLineD22" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLineD21" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="homeLineD12" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                        <Label prefHeight="41.0" prefWidth="148.0" text="Defense" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Label fx:id="homeTeamTime" layoutX="48.0" prefHeight="41.0" prefWidth="191.0" text="Home Team" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <ComboBox fx:id="specialSetupCombo" layoutX="640.0" layoutY="332.0" prefHeight="31.0" prefWidth="186.0" promptText="Even Strength" style="-fx-background-color: white;" />
+            <Group layoutX="970.0" layoutY="14.0">
+               <children>
+                  <Group layoutY="262.0">
+                     <children>
+                        <GridPane layoutX="3.0" layoutY="33.0" prefHeight="128.0" prefWidth="213.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="10.0" prefWidth="65.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="76.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="75.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 1: " textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 2: " textFill="WHITE" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 3:" textFill="WHITE" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="awayLineD11" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLineD32" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLineD31" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLineD22" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLineD21" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLineD12" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                        <Label prefHeight="41.0" prefWidth="148.0" text="Defense" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutY="45.0">
+                     <children>
+                        <Label layoutX="-3.0" prefHeight="41.0" prefWidth="148.0" text="Forwards" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutY="33.0" prefHeight="183.0" prefWidth="284.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="10.0" prefWidth="65.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="76.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="75.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="73.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 1: " textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 2: " textFill="WHITE" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 3:" textFill="WHITE" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Line 4: " textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="41.0" prefWidth="60.0" text="Extra:" textFill="WHITE" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="awayLine11" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLineExtra" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine43" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine42" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine41" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine33" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine32" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine31" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine23" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine22" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine21" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine13" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="awayLine12" alignment="CENTER" mnemonicParsing="false" onAction="#lineUpClicked" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #C42134;" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Group>
+                  <Label fx:id="homeTeamTime1" layoutX="48.0" prefHeight="41.0" prefWidth="191.0" text="Away Team" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <JFXListView fx:id="playerListHome" layoutX="27.0" layoutY="437.0" prefHeight="134.0" prefWidth="89.0" />
+            <JFXListView fx:id="playerListAway" layoutX="1156.0" layoutY="431.0" prefHeight="134.0" prefWidth="90.0" />
+            <ComboBox fx:id="playerCountAwayCombo" layoutX="836.0" layoutY="332.0" onAction="#changeAwayPlayers" prefHeight="31.0" prefWidth="59.0" promptText="5" style="-fx-background-color: white;" />
+            <ComboBox fx:id="playerCountHomeCombo" layoutX="372.0" layoutY="332.0" onAction="#changeHomePlayers" prefHeight="31.0" prefWidth="59.0" promptText="5" style="-fx-background-color: white;" />
+            <CheckBox fx:id="swapCheckBox" layoutX="604.0" layoutY="-8.0" mnemonicParsing="false" text="Swap" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="multipleSwapDisplay" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="478.0" prefHeight="53.0" prefWidth="512.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <AnchorPane prefHeight="561.0" prefWidth="1196.0" style="-fx-background-color: BLACK;" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane layoutX="-15.0" layoutY="155.0" prefHeight="404.0" prefWidth="1137.0" side="RIGHT" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab onSelectionChanged="#NetChartHomeSelected" text="Home">
+                  <content>
+                     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="348.0" prefWidth="1108.0">
+                           <children>
+                              <ImageView fitHeight="345.0" fitWidth="522.0" layoutX="79.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/half_rink.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Region id="region0" fx:id="region0" layoutX="79.0" layoutY="32.0" prefHeight="50.0" prefWidth="389.0" />
+                              <Region id="region1" fx:id="region1" layoutX="79.0" layoutY="80.0" prefHeight="247.0" prefWidth="96.0" />
+                              <Region id="region2" fx:id="region2" layoutX="174.0" layoutY="80.0" prefHeight="87.0" prefWidth="200.0" />
+                              <Region id="region3" fx:id="region3" layoutX="373.0" layoutY="80.0" prefHeight="247.0" prefWidth="96.0" />
+                              <Region id="region4" fx:id="region4" layoutX="175.0" layoutY="166.0" prefHeight="68.0" prefWidth="200.0" />
+                              <Region id="region5" fx:id="region5" layoutX="174.0" layoutY="234.0" prefHeight="69.0" prefWidth="199.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Region>
+                              <Region id="region6" fx:id="region6" layoutX="176.0" layoutY="304.0" prefHeight="24.0" prefWidth="200.0" />
+                              <ImageView fitHeight="348.0" fitWidth="591.0" layoutX="511.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/NetChart.jpg" />
+                                 </image>
+                              </ImageView>
+                              <!-- <Canvas fx:id="HomeNetChartCanvas" height="448.0" layoutX="43.0" layoutY="12.0" onMousePressed="#drawCircle" width="731.0" /> -->
+                              <Label fx:id="homeNetChartFail" layoutX="813.0" layoutY="119.0" prefHeight="22.0" prefWidth="169.0" text="Select a Game First!" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="homeNetChartSuccess" layoutX="813.0" layoutY="138.0" prefHeight="22.0" prefWidth="169.0" text="Net Chart Saved!" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <GridPane layoutX="510.0" layoutY="34.0" prefHeight="349.0" prefWidth="566.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Region fx:id="region00" prefHeight="200.0" prefWidth="200.0" />
+                                    <Region fx:id="region10" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                    <Region fx:id="region20" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+                                    <Region fx:id="region01" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <Region fx:id="region11" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Region fx:id="region21" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Region fx:id="region02" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                    <Region fx:id="region12" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Region fx:id="region22" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <CheckBox fx:id="heatMapHome" layoutX="735.0" layoutY="-3.0" mnemonicParsing="false" onMousePressed="#generateHeatMapHome" prefHeight="34.0" prefWidth="118.0" text="Heat Map" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Canvas fx:id="HomeRinkHeatMapCanvas" height="296.0" layoutX="79.0" layoutY="32.0" onMousePressed="#homeRinkHeatMapClicked" width="394.0" />
+                              <Canvas fx:id="HomeHeatMapCanvas" height="348.0" layoutX="510.0" layoutY="33.0" onMousePressed="#homeHeatMapClicked" width="567.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab onSelectionChanged="#NetChartAwaySelected" text="Away">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="1250.0">
+                           <children>
+                              <ImageView fitHeight="345.0" fitWidth="522.0" layoutX="79.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/half_rink.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Region id="regionA0" fx:id="regionA0" layoutX="80.0" layoutY="33.0" prefHeight="50.0" prefWidth="389.0" />
+                              <Region id="regionA1" fx:id="regionA1" layoutX="80.0" layoutY="81.0" prefHeight="247.0" prefWidth="96.0" />
+                              <Region id="regionA2" fx:id="regionA2" layoutX="175.0" layoutY="81.0" prefHeight="87.0" prefWidth="200.0" />
+                              <Region id="regionA3" fx:id="regionA3" layoutX="374.0" layoutY="81.0" prefHeight="247.0" prefWidth="96.0" />
+                              <Region id="regionA4" fx:id="regionA4" layoutX="176.0" layoutY="167.0" prefHeight="68.0" prefWidth="200.0" />
+                              <Region id="regionA5" fx:id="regionA5" layoutX="175.0" layoutY="235.0" prefHeight="69.0" prefWidth="199.0" />
+                              <Region id="regionA6" fx:id="regionA6" layoutX="175.0" layoutY="304.0" prefHeight="24.0" prefWidth="200.0" />
+                              <ImageView fitHeight="348.0" fitWidth="591.0" layoutX="511.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/NetChart.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="awayNetChartFail" layoutX="814.0" layoutY="149.0" prefHeight="24.0" prefWidth="167.0" text="Select a Game First!" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="awayNetChartSuccess" layoutX="814.0" layoutY="167.0" prefHeight="24.0" prefWidth="167.0" text="Net Chart Saved!" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <GridPane layoutX="511.0" layoutY="33.0" prefHeight="350.0" prefWidth="565.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Region fx:id="region001" prefHeight="200.0" prefWidth="200.0" />
+                                    <Region fx:id="region101" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                    <Region fx:id="region201" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+                                    <Region fx:id="region011" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <Region fx:id="region111" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Region fx:id="region211" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Region fx:id="region021" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                    <Region fx:id="region121" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Region fx:id="region221" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <CheckBox fx:id="heatMapAway" layoutX="735.0" layoutY="-3.0" mnemonicParsing="false" onMousePressed="#generateHeatMapAway" prefHeight="34.0" prefWidth="118.0" text="Heat Map" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Canvas fx:id="AwayHeatMapCanvas" height="348.0" layoutX="510.0" layoutY="33.0" onMousePressed="#awayHeatMapClicked" width="567.0" />
+                              <Canvas fx:id="AwayRinkHeatMapCanvas" height="296.0" layoutX="79.0" layoutY="32.0" onMousePressed="#awayRinkHeatMapClicked" width="394.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <GridPane layoutX="249.0" layoutY="-1.0" prefHeight="159.0" prefWidth="917.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXComboBox fx:id="shotCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Shot Number" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="5" />
+                  <JFXComboBox fx:id="playTypeCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Play Type" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="goalieCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Goalie" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="4" />
+                  <JFXComboBox fx:id="rbCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="RB" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="releaseTypeCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Release Type" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="extraInfoCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Extra Info" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="playerCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Player" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="3" />
+                  <JFXComboBox fx:id="teamForCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Team For" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="1" />
+                  <JFXComboBox fx:id="teamAgainstCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Team Against" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="2" />
+                  <JFXComboBox fx:id="statusCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Status" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="pChanceCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Primary Chance" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="sChanceCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Secondary Chance" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="shotTypeCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Shot Type" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="playerStatusCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Player Status" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="createdByCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Play Created By" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="scoringChanceCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Scoring Chance" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="resultCombo" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Result" style="-fx-background-color: white;" unFocusColor="BLACK" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="GamePicker" focusColor="WHITE" prefHeight="41.0" prefWidth="150.0" promptText="Select Game" style="-fx-background-color: white;" unFocusColor="BLACK" />
+               </children>
+            </GridPane>
+            <AnchorPane layoutX="-84.0" layoutY="-8.0" maxHeight="-Infinity" prefHeight="197.0" prefWidth="364.0">
+            <children>
+                        <JFXButton buttonType="RAISED" layoutX="122.0" layoutY="128.0" onAction="#StopTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Stop" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="128.0" onAction="#StartTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Start" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="227.0" layoutY="128.0" onAction="#ResetTimerClicked" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="Reset" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="Time" alignment="TOP_CENTER" layoutX="17.0" layoutY="63.0" prefHeight="50.0" prefWidth="210.0" text="20:00 1st" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                        <JFXButton buttonType="RAISED" layoutX="227.0" layoutY="62.0" onAction="#NextPeriodClicked" prefHeight="52.0" prefWidth="101.0" style="-fx-background-color: #C42134;" text="Next Period" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                  <TextField fx:id="urlTextField" layoutX="172.0" layoutY="14.0" prefHeight="39.0" prefWidth="150.0" promptText="Paste URL" />
+                     </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <AnchorPane prefHeight="138.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="425.0" layoutY="10.0" prefHeight="122.0" prefWidth="431.0" text="Shot Chart" textAlignment="CENTER" textFill="#c42134">
+               <font>
+                  <Font name="System Bold" size="75.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="132.0" fitWidth="136.0" layoutX="103.0" layoutY="14.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/SPLogo.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="1108.0" layoutY="52.0" onAction="#NetChartSaveHomePressed" prefHeight="40.0" prefWidth="169.0" style="-fx-background-color: #C42134;" text="Save All" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="1178.0" layoutY="3.0" onAction="#PlayerLogoutButtonClicked" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="3.0" layoutY="3.0" onAction="#goBack" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #C42134;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
